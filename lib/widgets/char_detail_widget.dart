@@ -61,8 +61,13 @@ class _CharDetailWidgetState extends State<CharDetailWidget> {
               ElevatedButton(
                   onPressed: () async {
                     if (textToWrite.text.trim().isNotEmpty) {
-                      widget.char.write(textToWrite.text.trim().codeUnits,
-                          allowLongWrite: true);
+                      widget.char
+                          .
+                          // write
+                          splitWrite(
+                        textToWrite.text.trim().codeUnits,
+                        // allowLongWrite: true
+                      );
                       debugPrint("debugBluetoothNotification: writeDone");
                     }
                   },
